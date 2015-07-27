@@ -13,4 +13,5 @@
 /tmp
 
 .env
+/config/initializers/app_env_vars.rb
 Procfile
