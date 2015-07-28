@@ -3,15 +3,16 @@ Rails.application.routes.draw do
 
   get 'users/help'
 
+  get 'users/contact'
+
   devise_for :users, controllers: {
         sessions: 'users/sessions'
       }
 
   root 'users#index'
 
-
-
   resources :users
+
 
 
 
