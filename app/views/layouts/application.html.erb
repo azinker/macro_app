@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>MacroApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
   <nav role="navigation">
     <div class="inner">
         <a href="#nav" class="nav-collapse" id="nav-collapse">Menu</a>
@@ -17,9 +19,14 @@
         </ul>
     </div>
 </nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+
 <%= yield %>
+
+
+
+<p class="notice"><font color="FFFFFF"><%= notice %></font></p>
+<p class="alert"><font color="FFFFFF"><%= alert %></font></p>
 
 </body>
 </html>

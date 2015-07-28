@@ -7,8 +7,13 @@ Rails.application.routes.draw do
         sessions: 'users/sessions'
       }
 
-
   root 'users#index'
 
+
+
   resources :users
+
+
+
+
 end
