@@ -43,6 +43,7 @@ before_filter :authenticate_user!, :except => [:about, :index, :please, :initiat
 
 
 
+
 private
  def user_params
     params.require(:user).permit(:profile_img, :weight, :age, :height, :sex, :name, :d_protein_r, :d_carb_r, :d_fat_r, :weight_goal)

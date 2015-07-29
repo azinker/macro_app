@@ -18,25 +18,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   # def new
-  #   super
   # end
 
   # POST /resource
-  def create
-    super
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to information_please_path
-    else
-      return
-  end
-end
-
-private
- def user_params
-    params.require(:user).permit(:profile_img, :weight, :age, :height, :sex, :name, :d_protein_r, :d_carb_r, :d_fat_r, :weight_goal)
- end
-
+  # def create
+  #   super
+  # end
 
 
 
