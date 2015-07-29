@@ -4,20 +4,19 @@
 <div class="large-3 columns">
 <h1><%= image_tag @user.avatar.url %></h1>
 
-<%= @user.email %>
 </div>
 <div class="large-9 columns">
-<ul class="inline-list right">
-MACRO
-</ul>
 </div>
+<ul class="inline-list"><br><br><br>
+<font size="24">MACRO INFO</font>
+</ul>
 </div>
 
 <div class="row">
 
 
 <div class="large-9 push-3 columns">
-<h3>Page Title <small>Page subtitle</small></h3>
+<h3><font color="f04124"><%= @user.name %>, Welcome</font></h3>
 <p>Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin. Venison tail chuck pork chop, andouille ball tip beef ribs flank boudin bacon. Salami andouille pork belly short ribs flank cow. Salami sirloin turkey kielbasa. Sausage venison pork loin leberkas chuck short loin, cow ham prosciutto pastrami jowl. Ham hock jerky tri-tip, fatback hamburger shoulder swine pancetta ground round. Tri-tip prosciutto meatball turkey, brisket spare ribs shankle chuck cow chicken ham hock boudin meatloaf jowl.</p>
 <p>Ground round pastrami pork loin tenderloin jerky. Jerky spare ribs biltong, ham hock ham capicola pork. Jerky turducken pork, meatloaf sausage capicola swine corned beef turkey short loin. Tongue prosciutto pork loin, ground round spare ribs venison kielbasa strip steak.</p>
 <p>Hamburger bresaola turkey t-bone, leberkas salami pork chop ham hock beef ribs. Rump biltong meatball venison, short ribs pork loin shank shankle corned beef beef. Cow salami jowl short loin hamburger fatback. Short ribs pork belly shoulder pastrami drumstick salami corned beef ham hock bresaola. Swine filet mignon cow sausage ball tip. Cow ribeye ground round, sausage pork loin pig beef ball tip turkey boudin.</p>
@@ -27,17 +26,22 @@ MACRO
 
 <div class="large-3 pull-9 columns">
 <ul class="side-nav">
-<li>Welcome <b><%= @user.name %></b></li>
-<li>Age: <%= @user.age %></a></li>
-<li>Height: <%= @user.height %></a></li>
-<li>Gender: <%= @user.sex %></li>
-<li>Current Weight: <%= @user.weight %></li>
-<li>Daily Protein Intake: <%= @user.d_protein_r %></li>
-<li>Daily Carb Intake: <%= @user.d_carb_r %></li>
-<li>Daily Fat Intake: <%= @user.d_fat_r %></li>
+<li><font size="4"><font color="f08a24"><b><%= @user.email %></b></font></font></li>
+<li><font size="4">Welcome <b><font color="43AC6A"><%= @user.name %></font></font></b></li>
+<li>Current Stats:</li>
+<li>Age: <b><font color="a0d3e8"><%= @user.age %></font></a></b></li>
+<li>Height: <b><font color="a0d3e8"><%= @user.height %></font></b></li>
+<li>Gender: <b><font color="a0d3e8"><%= @user.sex %></font></b></li>
+<li>Current Weight: <b><font color="a0d3e8"><%= @user.weight %></font></b></li>
+<li>Weight Goal: <b><font color="a0d3e8"><%= @user.weight_goal %></font></b></li>
+<li>Daily Protein Intake: <b><font color="a0d3e8"><%= @user.d_protein_r %></font></b></li>
+<li>Daily Carb Intake: <b><font color="a0d3e8"><%= @user.d_carb_r %></font></b></li>
+<li>Daily Fat Intake: <b><font color="a0d3e8"><%= @user.d_fat_r %></font></b></li>
+<li><%= link_to "Edit Profile", edit_user_registration_path, :class => "button tiny success expand" %></li>
+<li><%= link_to "Delete Account", user_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, :class => "button tiny alert expand" %></li>
 
 </ul>
-<p><img src="http://placehold.it/320x240&text=Ad"/></p>
+<p><img src="/workout3.png"/></p>
 </div>
 </div>
 
