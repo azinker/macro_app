@@ -31,7 +31,7 @@ gem 'twitter'
 gem 'instagram'
 
 #PictureUpload
-gem "paperclip"
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

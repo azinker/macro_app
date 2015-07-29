@@ -1,5 +1,5 @@
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :html => { :multipart => true }, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
   <%= devise_error_messages! %>
 <div class="large-8 large-centered columns"> -->
@@ -32,8 +32,9 @@
 
       <div class="row">
          <div class="large-12 columns">
-          <%= f.label :Profile_image_URL %>
-          <%= f.text_field :profile_img %>
+
+          <font color="000000"><%= f.file_field :avatar %></font>
+
         </div>
       </div>
 
@@ -124,6 +125,8 @@
 
 
 <% end %>
+
+
 
 
 
