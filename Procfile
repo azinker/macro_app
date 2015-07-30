@@ -1,3 +1,1 @@
-Procfile
-bundle exec thin start
-web: bundle exec rails s
+web: bundle exec rails server thin -p $PORT
