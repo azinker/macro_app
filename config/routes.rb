@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'meals/input'
+
   get 'users/help'
 
   get 'users/contact'
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users
+  resources :meals
 
 
 
