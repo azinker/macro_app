@@ -23,6 +23,25 @@
 * Paperclip Gem
 * SENDGRID addon for Heroku Email
 
+## MVP - Can be found on trello as well
+
+* As a user I would like to register and create an account
+* As a user I would like to be able to see my profile page in a simple view
+* As a user i would like to upload nutritional macros to my profile
+* As a user I would like to see what remaining macro netrients I have left for the day
+* As a user I would like to add up to 6 meals a day
+* As a user I would like to add an entree, side, and drink
+* As a user I would like the site to be launched on HerokuApp
+* As a user I would like to see Ruby on Rails
+* As a user I would like to be able to edit any of my information very easily.
+* As a user I woudl like to delete entries whenever
+
+## ICEBOX - Can be found on trello as well
+
+* As auser I would like to use oAuth - Not done.
+* As a user I would like to use an API - Not done.
+* As a user I would like to be able to view other peoples accounts - Not done.
+
 
 ## Issues
 * Some of the values for the meal DB will not show up on the form, but most do.
