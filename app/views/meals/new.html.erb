@@ -1,31 +1,128 @@
-<h1>Post New Meal</h1>
+
 <%= form_for @meal do |f| %>
-<% if @meal.errors.any? %>
-  <div class="error_messages">
-    <h2>Form is invalid</h2>
-    <ul>
-      <% for message in @meal.errors.full_messages %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+
+
+<div class="large-8 large-centered columns"> -->
+    <div class="login-box">
+      <div class="row">
+          <div class="large-12 columns">
+
+
+    <form>
+       <div class="row">
+         <div class="large-12 columns">
+          <%= f.label :Main_meal_name %>
+          <%= f.text_field :main_meal_name, autofocus: true, :placeholder => "Enter Main Meal" %>
+          </div>
+       </div>
+
+
+      <div class="row">
+         <div class="large-12 columns">
+          <%= f.label :Side_name %>
+          <%= f.text_field :side_name, autocomplete: "off", :placeholder => "Enter Side" %>
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="large-12 columns">
+        <%= f.label :Drink_name %>
+        <%= f.text_field :drink_name, autocomplete: "off", :placeholder => "Enter Drink" %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="large-12 columns">
+
+          <%= f.label :Meal_number %>
+          <font color="008CBA"><%= f.select( :meal_number, (1..6).to_a) %></font>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Main_meal_protein %>
+          <%= f.text_field :main_meal_protein, :placeholder => "Enter Meal Proteins" %>
+        </div>
+      </div>
+
+     <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Main_meal_carb %>
+          <%= f.text_field :main_meal_carb, :placeholder => "Enter Meal Carbs" %>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Main_meal_fat %>
+          <%= f.text_field :main_meal_fat, :placeholder => "Enter Meal Proteins" %>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Drink_protein %>
+          <%= f.text_field :drink_protein, :placeholder => "Enter Drink Proteins" %>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Drink_carb %>
+          <%= f.text_field :drink_carb, :placeholder => "Enter Drink Carbs" %>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <%= f.label :Drink_fat %>
+          <%= f.text_field :drink_fat, :placeholder => "Enter Drink Fats" %>
+        </div>
+      </div>
+
+      <div class="medium-4 columns">
+        <div class="row collapse">
+          <%= f.label :Side_protein %>
+          <%= f.text_field :side_protein, :placeholder => "Enter Side Proteins" %>
+        </div>
+      </div>
+
+      <div class="small-4 columns">
+        <div class="row collapse">
+          <%= f.label :Side_carb %>
+          <%= f.text_field :side_carb, :placeholder => "Enter Side Carbs" %>
+        </div>
+      </div>
+
+      <div class="small-4 columns">
+        <div class="row collapse">
+          <%= f.label :Side_fat %>
+          <%= f.text_field :side_fat, :placeholder => "Enter Side Fats" %>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="row collapse">
+          <%= f.label :Date %>
+          <%= f.text_field :date, :placeholder => "Enter Date" %>
+        </div>
+      </div>
+
+
+
+<br>
+
+<%= f.submit "Add Meal", :class => "button success expand" %>
+<%= link_to "Back", :back, class: "button expand" %>
+
+   </div>
   </div>
-<% end %>
-<div class="field">
-  <%= f.label :Meal_number %>
-  <%= f.text_field :meal_number %>
+</form>
 </div>
-<div class="field">
-  <%= f.label :Meal_date %>
-  <%= f.text_field :date %>
 </div>
-<div class="field">
-  <%= f.label :main_meal_name %>
-  <%= f.text_field :main_meal_name %>
-</div>
-<div class="field">
-  <%= f.label :main_meal_protein %>
-  <%= f.text_field :main_meal_protein %>
-</div>
-<div class="actions"><%= f.submit %></div>
-<%= link_to "Back", :back, class: "button success" %>
+
 <% end %>
