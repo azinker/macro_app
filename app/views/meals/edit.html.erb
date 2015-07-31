@@ -1,0 +1,31 @@
+<h1>Edit Meal</h1>
+<%= form_for @meal do |f| %>
+<% if @meal.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @meal.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="field">
+  <%= f.label :Meal_number %>
+  <%= f.text_field :meal_number %>
+</div>
+<div class="field">
+  <%= f.label :Meal_date %>
+  <%= f.text_field :date %>
+</div>
+<div class="field">
+  <%= f.label :main_meal_name %>
+  <%= f.text_field :main_meal_name %>
+</div>
+<div class="field">
+  <%= f.label :main_meal_protein %>
+  <%= f.text_field :main_meal_protein %>
+</div>
+<div class="actions"><%= f.submit %></div>
+<%= link_to "Back", :back, class: "button success" %>
+<% end %>

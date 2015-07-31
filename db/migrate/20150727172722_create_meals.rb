@@ -15,6 +15,7 @@ class CreateMeals < ActiveRecord::Migration
       t.string :side_protein
       t.string :side_fat
       t.string :side_carb
+      t.references :user
 
       t.timestamps null: false
     end
